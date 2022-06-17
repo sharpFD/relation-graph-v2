@@ -779,7 +779,7 @@
       flatNodeData(orign_nodes, parentNode, nodes_collect, links_collect) {
         orign_nodes.forEach(thisOrignNode => {
           if (!thisOrignNode.flated) {
-            thisOrignNode.flated = true
+            //thisOrignNode.flated = true
             nodes_collect.push(thisOrignNode)
             if (parentNode) {
               links_collect.push({
