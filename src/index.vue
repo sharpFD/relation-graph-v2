@@ -816,7 +816,7 @@
         this.graphData.nodes_map = {}
         this.graphData.lines_map = {}
         this.graphData.rootNode = null
-        console.log('set jsonData::', jsonData)
+        // console.log('set jsonData::', jsonData)
         this.resetViewSize()
         if (this.graphSetting.layouts && this.graphSetting.layouts.length > 0) {
           var _defaultLayoutSetting = this.graphSetting.layouts[0]
@@ -878,7 +878,7 @@
       },
       doLayout() {
         if (this.graphSetting.layouter && this.graphData.rootNode) {
-          console.log('需要布局的节点数量：', this.graphData.nodes.length)
+          // console.log('需要布局的节点数量：', this.graphData.nodes.length)
           this.graphSetting.layouter.placeNodes(this.graphData.nodes, this.graphData.rootNode, this.graphSetting)
         }
         document.body.addEventListener('mousemove', this.wow)

@@ -87,10 +87,10 @@ function SeeksCenterLayouter(layoutSetting, setting) {
   }
   this.placeNodes = function(allNodes, rootNode) {
     if (!rootNode) {
-      console.log('root is null:', rootNode)
+      // console.log('root is null:', rootNode)
       return
     } else {
-      console.log('layout by root:', rootNode)
+      //console.log('layout by root:', rootNode)
     }
     this.__origin_nodes = allNodes
     this.rootNode = rootNode

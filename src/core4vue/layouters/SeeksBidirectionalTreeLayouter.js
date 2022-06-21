@@ -3,7 +3,7 @@ import SeeksGraphMath from '../SeeksGraphMath'
 function SeeksBidirectionalTreeLayouter(layoutSetting, graphSetting) {
   this.graphSetting = graphSetting
   this.config = layoutSetting || {}
-  console.log('new SeeksBidirectionalTreeLayouter:', this.config)
+  // console.log('new SeeksBidirectionalTreeLayouter:', this.config)
   if (!this.config.from) this.config.from = 'left'
   if (this.config.levelDistance && typeof this.config.levelDistance === 'string') {
     this.config.levelDistanceArr = this.config.levelDistance.split(',').map(thisNum => parseInt(thisNum))
@@ -12,7 +12,7 @@ function SeeksBidirectionalTreeLayouter(layoutSetting, graphSetting) {
   this.allNodes = []
   this.__origin_nodes = []
   this.refresh = function() {
-    console.log('SeeksBidirectionalTreeLayouter:refresh:nodes:', this.__origin_nodes.length)
+    // console.log('SeeksBidirectionalTreeLayouter:refresh:nodes:', this.__origin_nodes.length)
     this.placeNodes(this.__origin_nodes, this.rootNode)
   }
   this.analysisNodes4Didirectional = function(willLayoutNodes, thisLevelNodes, thisDeep, analyticResult, levelDirect) {
@@ -213,11 +213,11 @@ function SeeksBidirectionalTreeLayouter(layoutSetting, graphSetting) {
         rootNode.lot.x = parseInt(__mapWidth * 0.3 - rootNode.el.offsetWidth) / 2 + _center_offset_x
         rootNode.lot.y = parseInt(__mapHeight / 2 - rootNode.el.offsetHeight / 2) + _center_offset_y
       }
-      console.log('设置根节点位置:', rootNode.text, rootNode.x, rootNode.y, this.graphSetting.canvasSize.width, this.graphSetting.canvasSize.height, this.graphSetting.canvasOffset.x, this.graphSetting.canvasOffset.y)
+      // console.log('设置根节点位置:', rootNode.text, rootNode.x, rootNode.y, this.graphSetting.canvasSize.width, this.graphSetting.canvasSize.height, this.graphSetting.canvasOffset.x, this.graphSetting.canvasOffset.y)
       rootNode.x = rootNode.lot.x + __offsetX
       rootNode.y = rootNode.lot.y + __offsetY
     } else {
-      console.log('固定位置的rootNode:', rootNode.text, rootNode.x, rootNode.y)
+      // console.log('固定位置的rootNode:', rootNode.text, rootNode.x, rootNode.y)
       if (rootNode.origin_x === undefined) {
         rootNode.origin_x = rootNode.x
         rootNode.origin_y = rootNode.y
@@ -226,7 +226,7 @@ function SeeksBidirectionalTreeLayouter(layoutSetting, graphSetting) {
       rootNode.lot.y = rootNode.origin_y
       rootNode.x = rootNode.lot.x + __offsetX
       rootNode.y = rootNode.lot.y + __offsetY
-      console.log('固定位置的rootNode:', rootNode.text, rootNode.x, rootNode.y)
+      // console.log('固定位置的rootNode:', rootNode.text, rootNode.x, rootNode.y)
     }
     rootNode.lot.placed = true
     var dynamicSizeConfig = {
